@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+   const int p=10;
+   int h,t,i=0,j=p-1,a[p];
+   printf("Введите элементы массива\n");
+   while (i!=p) {
+       scanf("%d",&a[i]);
+       i++;
+   }
+   i=0;
+   h=j;
+   while (j!=0) {
+   for (j;j<=9;j++) {
+       if (a[i]>a[j]) {
+           t=a[i];
+           a[i]=a[j];
+           a[j]=t;
+       }
+       i++;
+       }
+       i=0;
+       h-=1;
+       j=h;
+   }
+   for (i;i<p;i++)
+   printf("%d ",a[i]);
+    return 0;
+}
